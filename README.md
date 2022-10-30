@@ -14,8 +14,11 @@ Sonochemistry deals with creating chemical reactions inside acoustically excited
 The purpose of this paper is to present the optimization of the model for energy, through the example of hydrogen production. The initial bubble is composed of some noble gas and water vapour, while the hydrogen is produced by the dissociation of water. In the optimisation, I not only tune the equilibrium bubble size and the expansion rate, but also adjust parameters often considered constant in the literature, such as ambient pressure and temperature, and also examine the type of noble gas used and the modification of the surface tension by using surfactants. In order to sweep this multidimensional parameter space, the simulation has to be run millions of times, even at lower resolutions, which is extremely time-consuming. I wrote the programs in Python, using a Just-In-Time (JIT) compiler and parallelization for acceleration. Besides the bruteforce parameter sweep, I also present other, less computationally expensive global optimization strategies.
 The model presented here contains a single bubble, assumed to be spherical, with a homogeneous interior, and can thus be modeled by a system of ordinary differential equations. The radial dynamics of the bubble is described by the Keller-Miksis equation, which is stiff, thus making the numerical solution difficult. The state-of-the-art reaction mechanism contains 11 different compounds with 29 reactions, and nearly 400 coefficients in the equations.
 
-### TTartalom
-* **cikk**
+### Tartalom
+* **full model.ipynb**, **diffeq.py**: tartalmazzák a szimulációt (az összes konstanst, a jit-tel gyorsított differenciálegyenletet, differenciálegyenlet megoldókat, segédfüggvényeket, időgörbék plotolását) A 2 fálj nagyjából megegyezik, a .ipynb cellánként futtatható notebook, néhány markdown cellával, ebben egyszerűbb kipróbálni a függvényeket. A .py fájlt lehet beimportálni
+* **Parameter study.ipynb**: A teljes paraméter tanulmány. Összeállítja az összes kombinációt, több szálon megoldja őket, és .csv fájlokba menti az eredményt.
+* **data analysis.ipynb**: Beolvassa a különböző optimalizációk során keletkezett .csv fájlokat, és feldolgozza őket. Több ábra is ezzel készült.
+* **
 * **INP data extractor.ipynb**: opensmokeból táblázatok
 * **full model.ipynb**: teljes mechanizmus, egyszeri plotolás
 * **diffeq.py**: teljes mechanizmus, importálható
