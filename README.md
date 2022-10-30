@@ -18,10 +18,9 @@ The model presented here contains a single bubble, assumed to be spherical, with
 * **full model.ipynb**, **diffeq.py**: tartalmazzák a szimulációt (az összes konstanst, a jit-tel gyorsított differenciálegyenletet, differenciálegyenlet megoldókat, segédfüggvényeket, időgörbék plotolását) A 2 fálj nagyjából megegyezik, a .ipynb cellánként futtatható notebook, néhány markdown cellával, ebben egyszerűbb kipróbálni a függvényeket. A .py fájlt lehet beimportálni
 * **Parameter study.ipynb**: A teljes paraméter tanulmány. Összeállítja az összes kombinációt, több szálon megoldja őket, és .csv fájlokba menti az eredményt.
 * **data analysis.ipynb**: Beolvassa a különböző optimalizációk során keletkezett .csv fájlokat, és feldolgozza őket. Több ábra is ezzel készült.
-* **
-* **INP data extractor.ipynb**: opensmokeból táblázatok
-* **full model.ipynb**: teljes mechanizmus, egyszeri plotolás
-* **diffeq.py**: teljes mechanizmus, importálható
-* ...
+* **Pattern_search.ipynb**, **pattern_search.py**: A pattern search algoritmus egyszerű implementálása. A .py-ra azért van szükség, mert a multiprocessing könyvtár nem tud futtatni notebookban definiált függvényeket.
+* **Adaptive parameter study.ipynb**: Az adaptív paraméter tanulmány implementálása. Az elején Wrong solution néven van egy korábbi implementáció, ami kevésbé jól működik, a Good solution fejezet alatt lévő cellák futtatása ajánlott
+* **graphs.ipynb**: néhány grafikon ezzel a programmal készült
+* **INP data extractor.ipynb**: Kiolvassa a .inp fájlokból a paramétereket, hogy aztán azt be lehessen másolni a kódba. Eredetileg google colabban írtam.
 
 
